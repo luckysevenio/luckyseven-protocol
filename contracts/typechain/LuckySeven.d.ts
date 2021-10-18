@@ -11,7 +11,6 @@ import {
   PopulatedTransaction,
   BaseContract,
   ContractTransaction,
-  Overrides,
   CallOverrides,
 } from "ethers";
 import { BytesLike } from "@ethersproject/bytes";
@@ -21,21 +20,25 @@ import { TypedEventFilter, TypedEvent, TypedListener } from "./commons";
 
 interface LuckySevenInterface extends ethers.utils.Interface {
   functions: {
-    "message()": FunctionFragment;
-    "owner()": FunctionFragment;
-    "setMessage(string)": FunctionFragment;
-    "setOwner(address)": FunctionFragment;
+    "getLuckySevenNumber(uint256,uint256,uint256,uint256,uint256,uint256)": FunctionFragment;
   };
 
-  encodeFunctionData(functionFragment: "message", values?: undefined): string;
-  encodeFunctionData(functionFragment: "owner", values?: undefined): string;
-  encodeFunctionData(functionFragment: "setMessage", values: [string]): string;
-  encodeFunctionData(functionFragment: "setOwner", values: [string]): string;
+  encodeFunctionData(
+    functionFragment: "getLuckySevenNumber",
+    values: [
+      BigNumberish,
+      BigNumberish,
+      BigNumberish,
+      BigNumberish,
+      BigNumberish,
+      BigNumberish
+    ]
+  ): string;
 
-  decodeFunctionResult(functionFragment: "message", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "owner", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "setMessage", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "setOwner", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "getLuckySevenNumber",
+    data: BytesLike
+  ): Result;
 
   events: {};
 }
@@ -84,76 +87,62 @@ export class LuckySeven extends BaseContract {
   interface: LuckySevenInterface;
 
   functions: {
-    message(overrides?: CallOverrides): Promise<[string]>;
-
-    owner(overrides?: CallOverrides): Promise<[string]>;
-
-    setMessage(
-      message_: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
-
-    setOwner(
-      newOwner_: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<ContractTransaction>;
+    getLuckySevenNumber(
+      b: BigNumberish,
+      n: BigNumberish,
+      mu: BigNumberish,
+      p: BigNumberish,
+      i: BigNumberish,
+      j: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber]>;
   };
 
-  message(overrides?: CallOverrides): Promise<string>;
-
-  owner(overrides?: CallOverrides): Promise<string>;
-
-  setMessage(
-    message_: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
-
-  setOwner(
-    newOwner_: string,
-    overrides?: Overrides & { from?: string | Promise<string> }
-  ): Promise<ContractTransaction>;
+  getLuckySevenNumber(
+    b: BigNumberish,
+    n: BigNumberish,
+    mu: BigNumberish,
+    p: BigNumberish,
+    i: BigNumberish,
+    j: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<BigNumber>;
 
   callStatic: {
-    message(overrides?: CallOverrides): Promise<string>;
-
-    owner(overrides?: CallOverrides): Promise<string>;
-
-    setMessage(message_: string, overrides?: CallOverrides): Promise<void>;
-
-    setOwner(newOwner_: string, overrides?: CallOverrides): Promise<void>;
+    getLuckySevenNumber(
+      b: BigNumberish,
+      n: BigNumberish,
+      mu: BigNumberish,
+      p: BigNumberish,
+      i: BigNumberish,
+      j: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
   };
 
   filters: {};
 
   estimateGas: {
-    message(overrides?: CallOverrides): Promise<BigNumber>;
-
-    owner(overrides?: CallOverrides): Promise<BigNumber>;
-
-    setMessage(
-      message_: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<BigNumber>;
-
-    setOwner(
-      newOwner_: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+    getLuckySevenNumber(
+      b: BigNumberish,
+      n: BigNumberish,
+      mu: BigNumberish,
+      p: BigNumberish,
+      i: BigNumberish,
+      j: BigNumberish,
+      overrides?: CallOverrides
     ): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    message(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    setMessage(
-      message_: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
-    ): Promise<PopulatedTransaction>;
-
-    setOwner(
-      newOwner_: string,
-      overrides?: Overrides & { from?: string | Promise<string> }
+    getLuckySevenNumber(
+      b: BigNumberish,
+      n: BigNumberish,
+      mu: BigNumberish,
+      p: BigNumberish,
+      i: BigNumberish,
+      j: BigNumberish,
+      overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
   };
 }

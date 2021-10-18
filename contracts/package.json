@@ -36,6 +36,7 @@
     "fs-extra": "^10.0.0",
     "ganache-cli": "^6.12.2",
     "hardhat": "^2.6.4",
+    "luckyseven": "^0.0.2",
     "mocha": "^9.1.2"
   },
   "devDependencies": {
