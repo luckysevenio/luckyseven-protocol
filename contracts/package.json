@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "hardhat deploy",
+    "node": "hardhat node",
     "test": "hardhat test",
     "export-frontend": "hh export-frontend",
     "ganache": "ganache-cli --accounts 10 --defaultBalanceEther 100000 -d -i 1337 -l 12000000 -h 0.0.0.0 --allowUnlimitedContractSize true"

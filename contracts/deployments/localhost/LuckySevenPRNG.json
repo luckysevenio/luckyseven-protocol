@@ -1,0 +1,98 @@
+{
+  "address": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "b",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "n",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "mu",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "p",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "i",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "j",
+          "type": "uint256"
+        }
+      ],
+      "name": "prng",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "O",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x261b7232091cc95f344e43e5267f47ee880b6a23647e8a9f886064684974ced1",
+  "receipt": {
+    "to": null,
+    "from": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+    "contractAddress": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+    "transactionIndex": 0,
+    "gasUsed": "115145",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x273e8a27bbd35fe061cabac49d8cd31cb2fd583381533715ddf67e8b1d5ccf7a",
+    "transactionHash": "0x261b7232091cc95f344e43e5267f47ee880b6a23647e8a9f886064684974ced1",
+    "logs": [],
+    "blockNumber": 1,
+    "cumulativeGasUsed": "115145",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "77c4a984205e28fdfda366b28197cfd7",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"b\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"n\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"mu\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"p\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"i\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"j\",\"type\":\"uint256\"}],\"name\":\"prng\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"O\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"LuckySevenPRNG is a library to execute the LuckySeven Pseudo Random Number Generator.\",\"kind\":\"dev\",\"methods\":{\"prng(uint256,uint256,uint256,uint256,uint256,uint256)\":{\"details\":\"Generates a pseudo random number on chain with super low gas cost (850 gas)\",\"params\":{\"b\":\"1. numerator of the PRNG\",\"i\":\"5. chooses the starting position to start cutting the number\",\"j\":\"6. to choose the length of the random number (digits from i position to left)\",\"mu\":\"3. value for the oscillator to introduce entropy\",\"n\":\"2. power of the 10 on the divisor of the PRNG\",\"p\":\"4. expands the number as 10^p\"}}},\"title\":\"LuckySeven\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/LuckySevenPRNG.sol\":\"LuckySevenPRNG\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/LuckySevenPRNG.sol\":{\"content\":\"//SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.7.0;\\n\\n/**\\n * @title LuckySeven\\n * @dev LuckySevenPRNG is a library to execute the LuckySeven Pseudo Random Number Generator.\\n */\\nlibrary LuckySevenPRNG {\\n    /**\\n     * @dev Generates a pseudo random number on chain with super low gas cost (850 gas)\\n     * @param b 1. numerator of the PRNG\\n     * @param n 2. power of the 10 on the divisor of the PRNG\\n     * @param mu 3. value for the oscillator to introduce entropy\\n     * @param p 4. expands the number as 10^p\\n     * @param i 5. chooses the starting position to start cutting the number\\n     * @param j 6. to choose the length of the random number (digits from i position to left)\\n     */\\n\\n    function prng(\\n        uint256 b,\\n        uint256 n,\\n        uint256 mu,\\n        uint256 p,\\n        uint256 i,\\n        uint256 j\\n    ) public pure returns (uint256 O) {\\n        assembly {\\n            let L := exp(10, p) // 10^p\\n            let U := mul(L, b) // 10^p * b\\n            let C := exp(10, n) // 10^n\\n            let K := sub(C, mu) // 10^n - mu\\n            let Y := div(U, K) // (10^p * b)/(10^n - mu)\\n            let S := exp(10, add(i, j)) // 10^(i+j)\\n            let E := exp(10, i) // 10^i\\n            let V := mod(Y, S) // Y % 10^(i+j)\\n            let N := mod(Y, E) // Y % 10^i\\n            let I := sub(V, N) // (Y % 10^(i+j)) / (Y % 10^i)\\n            O := div(I, E)\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xdf99167a65127c855d4f57e4c6f6ba530a1b7978b4b1cd590c745713d0b22634\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x61011e610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80634c538bb6146038575b600080fd5b6093600480360360c0811015604c57600080fd5b8101908080359060200190929190803590602001909291908035906020019092919080359060200190929190803590602001909291908035906020019092919050505060a9565b6040518082815260200191505060405180910390f35b600083600a0a87810287600a0a878103808304868801600a0a88600a0a8183068184068082038381049a5050505050505050505050969550505050505056fea2646970667358221220da4badcf8c5f32cbe64e94fb71c328b93c435daa0f5de941436b9b2f013a7be464736f6c63430007000033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80634c538bb6146038575b600080fd5b6093600480360360c0811015604c57600080fd5b8101908080359060200190929190803590602001909291908035906020019092919080359060200190929190803590602001909291908035906020019092919050505060a9565b6040518082815260200191505060405180910390f35b600083600a0a87810287600a0a878103808304868801600a0a88600a0a8183068184068082038381049a5050505050505050505050969550505050505056fea2646970667358221220da4badcf8c5f32cbe64e94fb71c328b93c435daa0f5de941436b9b2f013a7be464736f6c63430007000033",
+  "devdoc": {
+    "details": "LuckySevenPRNG is a library to execute the LuckySeven Pseudo Random Number Generator.",
+    "kind": "dev",
+    "methods": {
+      "prng(uint256,uint256,uint256,uint256,uint256,uint256)": {
+        "details": "Generates a pseudo random number on chain with super low gas cost (850 gas)",
+        "params": {
+          "b": "1. numerator of the PRNG",
+          "i": "5. chooses the starting position to start cutting the number",
+          "j": "6. to choose the length of the random number (digits from i position to left)",
+          "mu": "3. value for the oscillator to introduce entropy",
+          "n": "2. power of the 10 on the divisor of the PRNG",
+          "p": "4. expands the number as 10^p"
+        }
+      }
+    },
+    "title": "LuckySeven",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

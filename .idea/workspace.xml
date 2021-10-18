@@ -1,16 +1,409 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae581ad3-50d0-4f56-9c84-cd6b6db5b2b9" name="Default Changelist" comment="feat: minting new tokens to deployer and not deployer">
-      <change afterPath="$PROJECT_DIR$/frontend/hooks/useWalletConnect.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/utils/images.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/utils/strings.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/utils/transactions.ts" afterDir="false" />
+    <list default="true" id="ae581ad3-50d0-4f56-9c84-cd6b6db5b2b9" name="Default Changelist" comment="feat: initial commit">
+      <change afterPath="$PROJECT_DIR$/contracts/contracts/LuckySevenPRNG.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pages/safe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/safe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app/sample/sample.router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app/server-status/server-status.router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/app/server-status/server.status.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/constants/endpoint.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/utils/getFilesWithKeyword.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/Gnosis.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/OpenZeppelin.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/OwnedContract.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/contracts/OwnedContract.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/BaseJumpRateModelV2.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CDaiDelegate.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CErc20.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CErc20Delegate.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CErc20Delegator.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CErc20Immutable.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CEther.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CToken.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CTokenInterfaces.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/CarefulMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Comptroller.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG1.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG2.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG3.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG4.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG5.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG6.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerG7.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerInterface.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ComptrollerStorage.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/DAIInterestRateModelV3.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/EIP20Interface.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/EIP20NonStandardInterface.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ErrorReporter.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Exponential.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/ExponentialNoError.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Governance/Comp.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Governance/GovernorAlpha.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Governance/GovernorBravoDelegate.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Governance/GovernorBravoDelegator.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Governance/GovernorBravoInterfaces.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/InterestRateModel.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/JumpRateModel.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/JumpRateModelV2.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/LegacyInterestRateModel.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/LegacyJumpRateModelV2.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Lens/CompoundLens.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Maximillion.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/PriceOracle.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Reservoir.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/SafeMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/SimplePriceOracle.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Timelock.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/Unitroller.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/compound/WhitePaperInterestRateModel.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/NoDelegateCall.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/UniswapV3Factory.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/UniswapV3Pool.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/UniswapV3PoolDeployer.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/IERC20Minimal.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/IUniswapV3Factory.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/IUniswapV3Pool.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/IUniswapV3PoolDeployer.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/callback/IUniswapV3FlashCallback.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/callback/IUniswapV3MintCallback.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/callback/IUniswapV3SwapCallback.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/pool/IUniswapV3PoolActions.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/pool/IUniswapV3PoolDerivedState.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/pool/IUniswapV3PoolEvents.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/pool/IUniswapV3PoolImmutables.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/pool/IUniswapV3PoolOwnerActions.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/interfaces/pool/IUniswapV3PoolState.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/BitMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/FixedPoint128.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/FixedPoint96.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/FullMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/LICENSE_GPL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/LICENSE_MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/LiquidityMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/LowGasSafeMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/Oracle.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/Position.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/SafeCast.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/SqrtPriceMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/SwapMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/Tick.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/TickBitmap.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/TickMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/TransferHelper.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/libraries/UnsafeMath.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/BitMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/BitMathTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/FullMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/FullMathTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/LiquidityMathTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/LowGasSafeMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/MockTimeUniswapV3Pool.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/MockTimeUniswapV3PoolDeployer.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/NoDelegateCallTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/OracleEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/OracleTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/SqrtPriceMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/SqrtPriceMathTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/SwapMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/SwapMathTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TestERC20.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TestUniswapV3Callee.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TestUniswapV3ReentrantCallee.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TestUniswapV3Router.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TestUniswapV3SwapPay.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickBitmapEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickBitmapTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickMathTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickOverflowSafetyEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/TickTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/UniswapV3PoolSwapTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/contracts/uniswap/core/test/UnsafeMathEchidnaTest.sol" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/deploy/2-gnosis-safe-contracts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/deploy/3-uniswap-v3-contracts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/test/compound.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/test/owned-contract.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/test/safe.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/AccessControl.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/BaseJumpRateModelV2.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/BitMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/BitMathTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CDaiDelegate.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CDelegateInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CDelegationStorage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CDelegatorInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CErc20.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CErc20Delegate.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CErc20Delegator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CErc20Immutable.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CErc20Interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CErc20Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CEther.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CToken.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CTokenInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CTokenStorage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Comp.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CompInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CompLike.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/CompoundLens.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Comptroller.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerErrorReporter.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG1.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG2.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG3.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG4.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG5.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG6.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerG7.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerLensInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerV1Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerV2Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerV3Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerV4Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerV5Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ComptrollerV6Storage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/DAIInterestRateModelV3.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/DaiJoinLike.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/DailyLimitModule.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/EIP20Interface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/EIP20NonStandardInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ERC20.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ERC20Burnable.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ERC20Pausable.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ERC20PresetMinterPauser.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/FallbackManager.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/FullMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/FullMathTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GemLike.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GnosisSafe.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GnosisSafeProxy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GnosisSafeProxyFactory.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorAlpha.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorBravoDelegate.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorBravoDelegateStorageV1.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorBravoDelegator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorBravoDelegatorStorage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorBravoEvents.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/GovernorBravoInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IERC20.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IERC20Minimal.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IProxy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IProxyCreationCallback.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ISignatureValidator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3Factory.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3FlashCallback.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3MintCallback.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3Pool.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolActions.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolDeployer.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolDerivedState.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolEvents.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolImmutables.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolOwnerActions.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3PoolState.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/IUniswapV3SwapCallback.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/InterestRateModel.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/JugLike.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/JumpRateModel.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/JumpRateModelV2.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/LegacyInterestRateModel.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/LegacyJumpRateModelV2.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/LiquidityMathTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/LowGasSafeMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/MasterCopy.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Maximillion.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/MockTimeUniswapV3Pool.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/MockTimeUniswapV3PoolDeployer.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Module.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/ModuleManager.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/MultiSend.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/NoDelegateCallTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/OracleEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/OracleTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/OwnedContract.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/OwnerManager.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Pausable.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/PotLike.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/PriceOracle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Reservoir.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/SimplePriceOracle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/SocialRecoveryModule.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/SqrtPriceMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/SqrtPriceMathTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/SwapMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/SwapMathTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TestERC20.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TestUniswapV3Callee.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TestUniswapV3ReentrantCallee.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TestUniswapV3Router.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TestUniswapV3SwapPay.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickBitmapEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickBitmapTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickMathTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickOverflowSafetyEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TickTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Timelock.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TimelockInterface.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/TokenErrorReporter.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/UniswapV3Factory.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/UniswapV3Pool.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/UniswapV3PoolDeployer.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/UniswapV3PoolSwapTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/Unitroller.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/UnitrollerAdminStorage.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/UnsafeMathEchidnaTest.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/VatLike.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/WhitePaperInterestRateModel.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/WhitelistModule.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/commons.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/AccessControl__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/BaseJumpRateModelV2__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/BitMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/BitMathTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CDaiDelegate__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CDelegateInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CDelegationStorage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CDelegatorInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CErc20Delegate__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CErc20Delegator__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CErc20Immutable__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CErc20Interface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CErc20Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CErc20__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CEther__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CTokenInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CTokenStorage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CToken__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CompInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CompLike__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Comp__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/CompoundLens__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerErrorReporter__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG1__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG2__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG3__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG4__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG5__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG6__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerG7__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerLensInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerV1Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerV2Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerV3Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerV4Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerV5Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ComptrollerV6Storage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Comptroller__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/DAIInterestRateModelV3__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/DaiJoinLike__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/DailyLimitModule__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/EIP20Interface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/EIP20NonStandardInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ERC20Burnable__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ERC20Pausable__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ERC20PresetMinterPauser__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ERC20__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/FallbackManager__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/FullMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/FullMathTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GemLike__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GnosisSafeProxyFactory__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GnosisSafeProxy__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GnosisSafe__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorAlpha__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorBravoDelegateStorageV1__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorBravoDelegate__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorBravoDelegatorStorage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorBravoDelegator__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorBravoEvents__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/GovernorBravoInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IERC20Minimal__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IERC20__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IProxyCreationCallback__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IProxy__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ISignatureValidator__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3Factory__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3FlashCallback__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3MintCallback__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolActions__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolDeployer__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolDerivedState__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolEvents__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolImmutables__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolOwnerActions__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3PoolState__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3Pool__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/IUniswapV3SwapCallback__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/InterestRateModel__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/JugLike__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/JumpRateModelV2__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/JumpRateModel__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/LegacyInterestRateModel__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/LegacyJumpRateModelV2__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/LiquidityMathTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/LowGasSafeMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/MasterCopy__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Maximillion__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/MockTimeUniswapV3PoolDeployer__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/MockTimeUniswapV3Pool__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/ModuleManager__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Module__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/MultiSend__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/NoDelegateCallTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/OracleEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/OracleTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/OwnedContract__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/OwnerManager__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Pausable__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/PotLike__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/PriceOracle__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Reservoir__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/SimplePriceOracle__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/SocialRecoveryModule__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/SqrtPriceMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/SqrtPriceMathTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/SwapMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/SwapMathTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TestERC20__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TestUniswapV3Callee__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TestUniswapV3ReentrantCallee__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TestUniswapV3Router__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TestUniswapV3SwapPay__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickBitmapEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickBitmapTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickMathTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickOverflowSafetyEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TickTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TimelockInterface__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Timelock__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/TokenErrorReporter__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/UniswapV3Factory__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/UniswapV3PoolDeployer__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/UniswapV3PoolSwapTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/UniswapV3Pool__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/UnitrollerAdminStorage__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/Unitroller__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/UnsafeMathEchidnaTest__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/VatLike__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/WhitePaperInterestRateModel__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/factories/WhitelistModule__factory.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/typechain/index.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +421,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/node_modules/@ethersproject/providers/src.ts/base-provider.ts" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/contracts/node_modules/@compound-finance/compound-js/dist/nodejs/index.d.ts" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/node_modules/@ethersproject/providers/src.ts/index.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1yYbVoZqmqttUoqfIlGnojRW2F4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -163,6 +551,7 @@
       <workItem from="1633701896339" duration="9718000" />
       <workItem from="1633985122761" duration="3539000" />
       <workItem from="1634581068478" duration="685000" />
+      <workItem from="1634592694512" duration="1152000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <created>1632432390636</created>
@@ -283,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633706876646</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: initial commit">
+      <created>1634593022535</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1634593022535</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,12 +710,12 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="feat: front end cleaned" />
     <MESSAGE value="feat: readme" />
     <MESSAGE value="feat: start script" />
     <MESSAGE value="chore: deploy pendant" />
     <MESSAGE value="feat: post install script" />
-    <MESSAGE value="feat: initial commit" />
     <MESSAGE value="feat: receiving signed tx on frontend" />
     <MESSAGE value="feat: withdrawing ETH from Safe" />
     <MESSAGE value="feat: contracts code" />
@@ -329,7 +725,8 @@
     <MESSAGE value="feat: deploying ERC20 tokens" />
     <MESSAGE value="feat: minting new tokens to owner and not owner" />
     <MESSAGE value="feat: minting new tokens to deployer and not deployer" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: minting new tokens to deployer and not deployer" />
+    <MESSAGE value="feat: initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: initial commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

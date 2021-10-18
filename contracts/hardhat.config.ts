@@ -17,7 +17,7 @@ import './tasks';
  */
 module.exports = {
   solidity: {
-    compilers: [{ version: '0.5.17' }, { version: '0.7.6' }],
+    compilers: [{ version: '0.7.0' }],
   },
   defaultNetwork: process.env.DEFAULT_NETWORK,
   networks: {
@@ -33,6 +33,10 @@ module.exports = {
       initialBaseFeePerGas: 0, // workaround from https://github.com/sc-forks/solidity-coverage/issues/652#issuecomment-896330136 . Remove when that issue is closed.
       allowUnlimitedContractSize: true,
       saveDeployments: true,
+      accounts: {
+        mnemonic:
+          'myth like bonus scare over problem client lizard pioneer submit female collect',
+      },
     },
     rinkeby: {
       url: process.env.RINKEBY_URL,
