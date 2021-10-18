@@ -1,0 +1,32 @@
+{
+  "name": "ramito-de-violetas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ganache": "cd contracts && ganache-cli --accounts 10 --defaultBalanceEther 100000 -d -i 1337 -l 12000000 -h 0.0.0.0 --allowUnlimitedContractSize true",
+    "deploy:contracts": "cd contracts && npx hardhat deploy",
+    "compile:contracts": "cd contracts && npx hardhat compile",
+    "test:contracts": "cd contracts && npx hardhat test",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm run dev",
+    "postinstall": "cd frontend && npm i && cd ../contracts && npm i && cd ../backend && npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiasbn/ramito-de-violetas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiasbn/ramito-de-violetas/issues"
+  },
+  "homepage": "https://github.com/matiasbn/ramito-de-violetas#readme",
+  "dependencies": {
+    "@gnosis.pm/safe-core-sdk": "^0.3.1",
+    "ethers": "^5.4.7",
+    "ganache-cli": "^6.12.2",
+    "prettier": "^2.4.1",
+    "web3-core": "^1.6.0"
+  }
+}

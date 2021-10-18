@@ -1,0 +1,61 @@
+// import { AddressZero } from '@ethersproject/constants';
+// import { deployments, ethers } from 'hardhat';
+// import { GnosisSafe, MultiSend, WhitelistModule } from '../typechain';
+//
+// export const getSafeSingleton = async () => {
+//   const SafeDeployment = await deployments.get('GnosisSafe');
+//   const Safe = await ethers.getContractFactory('GnosisSafe');
+//   return Safe.attach(SafeDeployment.address);
+// };
+//
+// export const getFactory = async () => {
+//   const FactoryDeployment = await deployments.get('GnosisSafeProxyFactory');
+//   const Factory = await ethers.getContractFactory('GnosisSafeProxyFactory');
+//   return Factory.attach(FactoryDeployment.address);
+// };
+//
+// export const getSafeTemplate = async (): Promise<GnosisSafe> => {
+//   const singleton = await getSafeSingleton();
+//   const factory = await getFactory();
+//   const template = await factory.callStatic.createProxy(
+//     singleton.address,
+//     '0x'
+//   );
+//   await factory
+//     .createProxy(singleton.address, '0x')
+//     .then((tx: any) => tx.wait());
+//   const Safe = await ethers.getContractFactory('GnosisSafe');
+//   return Safe.attach(template) as GnosisSafe;
+// };
+//
+// export const getSafeWithOwners = async (
+//   owners: string[],
+//   threshold?: number
+// ): Promise<GnosisSafe> => {
+//   const template = await getSafeTemplate();
+//   await template.setup(
+//     owners,
+//     threshold || owners.length,
+//     AddressZero,
+//     '0x',
+//     AddressZero,
+//     AddressZero,
+//     0,
+//     AddressZero
+//   );
+//   return template;
+// };
+//
+// export const getMultiSend = async (): Promise<MultiSend> => {
+//   const MultiSendDeployment = await deployments.get('MultiSend');
+//   const MultiSend = await ethers.getContractFactory('MultiSend');
+//   return MultiSend.attach(MultiSendDeployment.address) as MultiSend;
+// };
+//
+// export const getWhitelistModule = async (): Promise<WhitelistModule> => {
+//   const WhitelistModuleDeployment = await deployments.get('WhitelistModule');
+//   const WhitelistModule = await ethers.getContractFactory('WhitelistModule');
+//   return WhitelistModule.attach(
+//     WhitelistModuleDeployment.address
+//   ) as WhitelistModule;
+// };

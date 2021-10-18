@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae581ad3-50d0-4f56-9c84-cd6b6db5b2b9" name="Default Changelist" comment="feat: minting new tokens to deployer and not deployer">
+      <change afterPath="$PROJECT_DIR$/frontend/hooks/useWalletConnect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utils/images.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utils/strings.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/utils/transactions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pages/safe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pages/safe.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/@ethersproject/providers/src.ts/base-provider.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/contracts/node_modules/@compound-finance/compound-js/dist/nodejs/index.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@ethersproject/providers/src.ts/index.ts" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1yYbVoZqmqttUoqfIlGnojRW2F4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/contracts" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/contracts/node_modules/mocha" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showLigatures" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/contracts" />
+      <recent name="$PROJECT_DIR$/contracts/test" />
+      <recent name="$PROJECT_DIR$/contracts/deploy" />
+      <recent name="$PROJECT_DIR$/contracts/contracts" />
+      <recent name="$PROJECT_DIR$/frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/contracts/contracts/uniswap/core" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Mocha.GnosisSafe.Should create a Safe properly">
+    <configuration name="compile:contracts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="compile:contracts" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy:contracts" type="js.build_tools.npm" temporary="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy:contracts" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="ganache" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ganache" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:frontend" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:frontend" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="GnosisSafe.Should create a Safe properly" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/contracts/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/contracts</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/contracts/test/compound.test.ts</test-file>
+      <test-names>
+        <name value="GnosisSafe" />
+        <name value="Should create a Safe properly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start:frontend" />
+        <item itemvalue="Mocha.GnosisSafe.Should create a Safe properly" />
+        <item itemvalue="npm.deploy:contracts" />
+        <item itemvalue="npm.ganache" />
+        <item itemvalue="npm.compile:contracts" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae581ad3-50d0-4f56-9c84-cd6b6db5b2b9" name="Default Changelist" comment="" />
+      <created>1632431494916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632431494916</updated>
+      <workItem from="1632431496121" duration="2141000" />
+      <workItem from="1632433804605" duration="249000" />
+      <workItem from="1632434065278" duration="1240000" />
+      <workItem from="1632435522891" duration="205000" />
+      <workItem from="1633369023250" duration="1973000" />
+      <workItem from="1633376241615" duration="716000" />
+      <workItem from="1633376973748" duration="1834000" />
+      <workItem from="1633443097708" duration="1122000" />
+      <workItem from="1633450310302" duration="761000" />
+      <workItem from="1633452083226" duration="4160000" />
+      <workItem from="1633540615551" duration="24540000" />
+      <workItem from="1633701179879" duration="629000" />
+      <workItem from="1633701896339" duration="9718000" />
+      <workItem from="1633985122761" duration="3539000" />
+      <workItem from="1634581068478" duration="685000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: initial commit">
+      <created>1632432390636</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632432390636</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: front end cleaned">
+      <created>1632433309563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632433309563</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: initial commit">
+      <created>1632434131218</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1632434131218</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: readme">
+      <created>1632434330961</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632434330961</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: start script">
+      <created>1632434440172</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1632434440172</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: deploy pendant">
+      <created>1632435546196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632435546196</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: post install script">
+      <created>1632435688402</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1632435688402</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: initial commit">
+      <created>1633369460024</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1633369460024</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: initial commit">
+      <created>1633369505137</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1633369505137</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: receiving signed tx on frontend">
+      <created>1633556463808</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1633556463808</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: withdrawing ETH from Safe">
+      <created>1633558298069</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1633558298069</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: contracts code">
+      <created>1633614946171</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1633614946171</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: deploying uniswap core contracts">
+      <created>1633616900626</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1633616900626</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: compiling uniswap core contracts">
+      <created>1633617774337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1633617774337</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: openzeppelin contracts">
+      <created>1633705046758</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1633705046758</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: deploying ERC20 tokens">
+      <created>1633705247526</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1633705247526</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: minting new tokens to deployer and not deployer">
+      <created>1633706876646</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1633706876646</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: front end cleaned" />
+    <MESSAGE value="feat: readme" />
+    <MESSAGE value="feat: start script" />
+    <MESSAGE value="chore: deploy pendant" />
+    <MESSAGE value="feat: post install script" />
+    <MESSAGE value="feat: initial commit" />
+    <MESSAGE value="feat: receiving signed tx on frontend" />
+    <MESSAGE value="feat: withdrawing ETH from Safe" />
+    <MESSAGE value="feat: contracts code" />
+    <MESSAGE value="feat: deploying uniswap core contracts" />
+    <MESSAGE value="feat: compiling uniswap core contracts" />
+    <MESSAGE value="feat: openzeppelin contracts" />
+    <MESSAGE value="feat: deploying ERC20 tokens" />
+    <MESSAGE value="feat: minting new tokens to owner and not owner" />
+    <MESSAGE value="feat: minting new tokens to deployer and not deployer" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: minting new tokens to deployer and not deployer" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
