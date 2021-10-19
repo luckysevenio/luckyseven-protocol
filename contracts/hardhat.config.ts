@@ -37,6 +37,10 @@ module.exports = {
         mnemonic:
           'myth like bonus scare over problem client lizard pioneer submit female collect',
       },
+      // mining: {
+      //   auto: false,
+      //   interval: [3000, 6000],
+      // },
     },
     rinkeby: {
       url: process.env.RINKEBY_URL,

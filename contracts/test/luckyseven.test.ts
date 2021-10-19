@@ -1,6 +1,7 @@
 import { expect } from './utils/chai-setup';
 import { LuckySeven } from '@typechain/LuckySeven';
 import { luckySevenPRNG, Parameters } from '../luckyseven.prng';
+import { BigNumber } from 'ethers';
 
 const hre = require('hardhat');
 const { ethers, deployments } = hre;
@@ -31,15 +32,15 @@ describe('LuckySeven', function () {
     fixture = await setup();
   });
 
-  it('Should calculate the random number properly', async function () {
+  it('Should calculate the random number properly onchain and offchain', async function () {
     const { luckyseven } = fixture;
     const parameters: Parameters = {
-      b: 1,
-      n: 5,
-      mu: 20,
-      p: 50,
-      i: 0,
-      j: 70,
+      b: '1',
+      n: '5',
+      mu: '20',
+      p: '20',
+      i: '0',
+      j: '70',
     };
     const onchain = await luckyseven.getLuckySevenNumber(
       parameters.b,
@@ -50,8 +51,29 @@ describe('LuckySeven', function () {
       parameters.j
     );
     const offchain = luckySevenPRNG(parameters);
-    console.log(onchain.toString());
-    console.log(offchain.toString());
     expect(onchain).to.be.equal(offchain);
+    await luckyseven.getLuckySevenNumberFromBlockHash(1);
+  });
+
+  it('Should calculate the random number properly onchain with the blockhash', async function () {
+    const { luckyseven } = fixture;
+    const parameters: Parameters = {
+      b: '1',
+      n: '5',
+      mu: '20',
+      p: '20',
+      i: '0',
+      j: '70',
+    };
+    const blockhash = await luckyseven.getLuckySevenNumberFromBlockHash(
+      parameters.p
+    );
+    console.log(blockhash.toString());
+    parameters.b = blockhash.toString().slice(0, 12);
+    parameters.n = blockhash.toString().slice(12, 14);
+    parameters.mu = blockhash.toString().slice(14, 24);
+    parameters.p = blockhash.toString().slice(24, 30);
+    parameters.i = blockhash.toString().slice(26, 30);
+    const offchain = luckySevenPRNG(parameters);
   });
 });

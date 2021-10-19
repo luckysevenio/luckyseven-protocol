@@ -18,41 +18,49 @@ import { Listener, Provider } from "@ethersproject/providers";
 import { FunctionFragment, EventFragment, Result } from "@ethersproject/abi";
 import { TypedEventFilter, TypedEvent, TypedListener } from "./commons";
 
-interface LuckySevenInterface extends ethers.utils.Interface {
+interface StringUtilsInterface extends ethers.utils.Interface {
   functions: {
-    "getLuckySevenNumber(uint256,uint256,uint256,uint256,uint256,uint256)": FunctionFragment;
-    "getLuckySevenNumberFromBlockHash(uint256)": FunctionFragment;
+    "addressToString(address)": FunctionFragment;
+    "bytes32ToStr(bytes32)": FunctionFragment;
+    "bytesToUint(bytes)": FunctionFragment;
+    "uintToStr(uint256)": FunctionFragment;
   };
 
   encodeFunctionData(
-    functionFragment: "getLuckySevenNumber",
-    values: [
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish,
-      BigNumberish
-    ]
+    functionFragment: "addressToString",
+    values: [string]
   ): string;
   encodeFunctionData(
-    functionFragment: "getLuckySevenNumberFromBlockHash",
+    functionFragment: "bytes32ToStr",
+    values: [BytesLike]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "bytesToUint",
+    values: [BytesLike]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "uintToStr",
     values: [BigNumberish]
   ): string;
 
   decodeFunctionResult(
-    functionFragment: "getLuckySevenNumber",
+    functionFragment: "addressToString",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
-    functionFragment: "getLuckySevenNumberFromBlockHash",
+    functionFragment: "bytes32ToStr",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(
+    functionFragment: "bytesToUint",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "uintToStr", data: BytesLike): Result;
 
   events: {};
 }
 
-export class LuckySeven extends BaseContract {
+export class StringUtils extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
@@ -93,89 +101,90 @@ export class LuckySeven extends BaseContract {
     toBlock?: string | number | undefined
   ): Promise<Array<TypedEvent<EventArgsArray & EventArgsObject>>>;
 
-  interface: LuckySevenInterface;
+  interface: StringUtilsInterface;
 
   functions: {
-    getLuckySevenNumber(
-      b: BigNumberish,
-      n: BigNumberish,
-      mu: BigNumberish,
-      p: BigNumberish,
-      i: BigNumberish,
-      j: BigNumberish,
+    addressToString(
+      _address: string,
       overrides?: CallOverrides
-    ): Promise<[BigNumber]>;
+    ): Promise<[string]>;
 
-    getLuckySevenNumberFromBlockHash(
-      p: BigNumberish,
+    bytes32ToStr(
+      _bytes32: BytesLike,
       overrides?: CallOverrides
-    ): Promise<[BigNumber]>;
+    ): Promise<[string]>;
+
+    bytesToUint(
+      b: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<[BigNumber] & { result: BigNumber }>;
+
+    uintToStr(
+      _i: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[string] & { _uintAsString: string }>;
   };
 
-  getLuckySevenNumber(
-    b: BigNumberish,
-    n: BigNumberish,
-    mu: BigNumberish,
-    p: BigNumberish,
-    i: BigNumberish,
-    j: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<BigNumber>;
+  addressToString(_address: string, overrides?: CallOverrides): Promise<string>;
 
-  getLuckySevenNumberFromBlockHash(
-    p: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<BigNumber>;
+  bytes32ToStr(_bytes32: BytesLike, overrides?: CallOverrides): Promise<string>;
+
+  bytesToUint(b: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
+
+  uintToStr(_i: BigNumberish, overrides?: CallOverrides): Promise<string>;
 
   callStatic: {
-    getLuckySevenNumber(
-      b: BigNumberish,
-      n: BigNumberish,
-      mu: BigNumberish,
-      p: BigNumberish,
-      i: BigNumberish,
-      j: BigNumberish,
+    addressToString(
+      _address: string,
       overrides?: CallOverrides
-    ): Promise<BigNumber>;
+    ): Promise<string>;
 
-    getLuckySevenNumberFromBlockHash(
-      p: BigNumberish,
+    bytes32ToStr(
+      _bytes32: BytesLike,
       overrides?: CallOverrides
-    ): Promise<BigNumber>;
+    ): Promise<string>;
+
+    bytesToUint(b: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
+
+    uintToStr(_i: BigNumberish, overrides?: CallOverrides): Promise<string>;
   };
 
   filters: {};
 
   estimateGas: {
-    getLuckySevenNumber(
-      b: BigNumberish,
-      n: BigNumberish,
-      mu: BigNumberish,
-      p: BigNumberish,
-      i: BigNumberish,
-      j: BigNumberish,
+    addressToString(
+      _address: string,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
-    getLuckySevenNumberFromBlockHash(
-      p: BigNumberish,
+    bytes32ToStr(
+      _bytes32: BytesLike,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
+
+    bytesToUint(b: BytesLike, overrides?: CallOverrides): Promise<BigNumber>;
+
+    uintToStr(_i: BigNumberish, overrides?: CallOverrides): Promise<BigNumber>;
   };
 
   populateTransaction: {
-    getLuckySevenNumber(
-      b: BigNumberish,
-      n: BigNumberish,
-      mu: BigNumberish,
-      p: BigNumberish,
-      i: BigNumberish,
-      j: BigNumberish,
+    addressToString(
+      _address: string,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
-    getLuckySevenNumberFromBlockHash(
-      p: BigNumberish,
+    bytes32ToStr(
+      _bytes32: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    bytesToUint(
+      b: BytesLike,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    uintToStr(
+      _i: BigNumberish,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
   };

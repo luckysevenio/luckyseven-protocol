@@ -11,11 +11,23 @@ const deploy: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     log: true,
   });
 
+  const consoleLibrary = await deploy('console', {
+    from: deployer,
+    log: true,
+  });
+
+  const stringUtilsLibrary = await deploy('StringUtils', {
+    from: deployer,
+    log: true,
+  });
+
   await deploy('LuckySeven', {
     from: deployer,
     log: true,
     libraries: {
       LuckySevenPRNG: luckysevenLibrary.address,
+      console: consoleLibrary.address,
+      StringUtils: stringUtilsLibrary.address,
     },
   });
 };

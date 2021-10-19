@@ -1,12 +1,12 @@
 import { BigNumber } from 'ethers';
 
 export interface Parameters {
-  b: number;
-  n: number;
-  mu: number;
-  p: number;
-  i: number;
-  j: number;
+  b: string;
+  n: string;
+  mu: string;
+  p: string;
+  i: string;
+  j: string;
 }
 
 export function luckySevenPRNG(parameters: Parameters) {

@@ -3,6 +3,8 @@
 /* eslint-disable */
 export type { LuckySeven } from "./LuckySeven";
 export type { LuckySevenPRNG } from "./LuckySevenPRNG";
+export type { StringUtils } from "./StringUtils";
 
 export { LuckySeven__factory } from "./factories/LuckySeven__factory";
 export { LuckySevenPRNG__factory } from "./factories/LuckySevenPRNG__factory";
+export { StringUtils__factory } from "./factories/StringUtils__factory";
